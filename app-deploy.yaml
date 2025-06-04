@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mkdocs-nginx
+  labels:
+    app: mkdocs-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mkdocs-nginx
+  template:
+    metadata:
+      labels:
+        app: mkdocs-nginx
+    spec:
+      containers:
+      - name: mkdocs-nginx
+        image: 343218219223.dkr.ecr.ap-south-1.amazonaws.com/test-repo:6
+        ports:
+        - containerPort: 80
