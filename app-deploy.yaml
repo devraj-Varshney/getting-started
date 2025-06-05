@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mkdocs-nginx
-        image: 343218219223.dkr.ecr.ap-south-1.amazonaws.com/test-repo:1
+        image: 343218219223.dkr.ecr.ap-south-1.amazonaws.com/test-repo:3
         ports:
         - containerPort: 80
